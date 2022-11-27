@@ -1,6 +1,6 @@
 # Grain Playground
 
-This project serves as a playground for exploring this [Grain Programming Language](https://grain-lang.org/)
+This project serves as a playground for exploring this [Grain Programming Language](https://grain-lang.org/).
 
 ## Prerequisites
 
