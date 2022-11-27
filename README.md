@@ -12,3 +12,9 @@ Ensure the following requirements are met prior to usage:
 ## Exercises
 
 The OCmal [exerices](https://ocaml.org/problems) are solved in Grain and are used as a means to explore Grain syntax, semantics, and idioms.
+
+## Run
+
+```
+grain main.gr
+```
