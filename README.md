@@ -22,7 +22,9 @@ grain main.gr
 
 ### Wasm3
 
-The Grain compiler generates WebAssembly (WASM) binaries that can be executed by a WASM interpreter. The following command assumes that the [Wasm3](https://github.com/wasm3/wasm3) interpreter is installed:
+The Grain compiler generates WebAssembly (WASM) binaries that can be executed by a WASM interpreter.
+
+The following command assumes that the [Wasm3](https://github.com/wasm3/wasm3) interpreter is installed:
 
 ```
 wasm3 main.gr.wasm
