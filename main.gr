@@ -1,0 +1,22 @@
+let rec last = (list) => {
+  match (list) {
+    [] => None,
+    [_, y] => Some(y),
+    [_, ...rest] => last(rest)
+  }
+}
+
+let rec lastTwo = (list) => {
+  match (list) {
+    [] | [_] => None,
+    [x, y] => Some((x, y)),
+    [_, ...rest] => lastTwo(rest)
+  }
+}
+
+print(last([]))
+print(last([1, 2, 3]))
+print(lastTwo([]))
+print(lastTwo([1]))
+print(lastTwo([1, 2]))
+print(lastTwo([1, 2, 3]))
