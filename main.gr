@@ -15,6 +15,7 @@ let rec lastTwo = (list) => {
 }
 
 print(last([]))
+print(last([1, 2]))
 print(last([1, 2, 3]))
 print(lastTwo([]))
 print(lastTwo([1]))
