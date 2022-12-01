@@ -6,6 +6,10 @@ let rec last = (list) => {
   }
 }
 
+print(last([]) == None)
+print(last([1, 2]) == Some(2))
+print(last([1, 2, 3]) == Some(3))
+
 let rec lastTwo = (list) => {
   match (list) {
     [] | [_] => None,
@@ -14,10 +18,42 @@ let rec lastTwo = (list) => {
   }
 }
 
-print(last([]))
-print(last([1, 2]))
-print(last([1, 2, 3]))
-print(lastTwo([]))
-print(lastTwo([1]))
-print(lastTwo([1, 2]))
-print(lastTwo([1, 2, 3]))
+print(lastTwo([]) == None)
+print(lastTwo([1]) == None)
+print(lastTwo([1, 2]) == Some((1, 2)))
+print(lastTwo([1, 2, 3]) == Some((2, 3)))
+
+let rec at = (list, n) => {
+  match ((list, n)) {
+    ([], _) => None,
+    ([first, ..._], 0) => Some(first),
+    ([_, ...rest], _) => at(rest, n -1)
+  }
+}
+
+print(at([], 0) == None)
+print(at([1], 0) == Some(1))
+print(at([1], 1) == None)
+print(at([1, 2], 0) == Some(1))
+print(at([1, 2], 1) == Some(2))
+print(at([1, 2], 2) == None)
+print(at([1, 2, 3], 0) == Some(1))
+print(at([1, 2, 3], 1) == Some(2))
+print(at([1, 2, 3], 2) == Some(3))
+print(at([1, 2, 3], 3) == None)
+
+let length = (list) => {
+  let rec count = (list, acc) => {
+    match (list) {
+      [] => acc,
+      [_, ...rest] => count(rest, acc + 1)
+    }
+  }
+
+  count(list, 0)
+}
+
+print(length([]) == 0)
+print(length([1]) == 1)
+print(length([1, 2]) == 2)
+print(length([1, 2, 3]) == 3)
