@@ -1,10 +1,10 @@
 import List from "list"
 
-let rec last = (list) => {
+let rec last = list => {
   match (list) {
     [] => None,
     [_, y] => Some(y),
-    [_, ...rest] => last(rest)
+    [_, ...rest] => last(rest),
   }
 }
 
@@ -12,11 +12,11 @@ print(last([]) == None)
 print(last([1, 2]) == Some(2))
 print(last([1, 2, 3]) == Some(3))
 
-let rec lastTwo = (list) => {
+let rec lastTwo = list => {
   match (list) {
     [] | [_] => None,
     [x, y] => Some((x, y)),
-    [_, ...rest] => lastTwo(rest)
+    [_, ...rest] => lastTwo(rest),
   }
 }
 
@@ -29,7 +29,7 @@ let rec at = (list, n) => {
   match ((list, n)) {
     ([], _) => None,
     ([first, ..._], 0) => Some(first),
-    ([_, ...rest], _) => at(rest, n -1)
+    ([_, ...rest], _) => at(rest, n - 1),
   }
 }
 
@@ -44,11 +44,11 @@ print(at([1, 2, 3], 1) == Some(2))
 print(at([1, 2, 3], 2) == Some(3))
 print(at([1, 2, 3], 3) == None)
 
-let length = (list) => {
+let length = list => {
   let rec count = (list, acc) => {
     match (list) {
       [] => acc,
-      [_, ...rest] => count(rest, acc + 1)
+      [_, ...rest] => count(rest, acc + 1),
     }
   }
 
@@ -60,10 +60,10 @@ print(length([1]) == 1)
 print(length([1, 2]) == 2)
 print(length([1, 2, 3]) == 3)
 
-let rec reverse = (list) => {
+let rec reverse = list => {
   match (list) {
     [] | [_] => list,
-    [first, ...rest] => List.append(reverse(rest), [first])
+    [first, ...rest] => List.append(reverse(rest), [first]),
   }
 }
 
