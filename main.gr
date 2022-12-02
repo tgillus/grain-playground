@@ -60,11 +60,15 @@ print(length([1]) == 1)
 print(length([1, 2]) == 2)
 print(length([1, 2, 3]) == 3)
 
-let rec reverse = list => {
-  match (list) {
-    [] | [_] => list,
-    [first, ...rest] => List.append(reverse(rest), [first]),
+let reverse = list => {
+  let rec helper = (acc, list) => {
+    match (list) {
+      [] => acc,
+      [first, ...rest] => helper([first, ...acc], rest),
+    }
   }
+
+  helper([], list)
 }
 
 print(reverse([]) == [])
