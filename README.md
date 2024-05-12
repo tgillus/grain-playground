@@ -6,7 +6,7 @@ This project serves as a playground for exploring this [Grain](https://grain-lan
 
 Ensure the following requirements are met prior to usage:
 
-- Node.js 14 or higher
+- Node.js 18 or higher
 - Grain [installed](https://grain-lang.org/docs/getting_grain)
 - Wasm3 [installed](https://github.com/wasm3/wasm3/blob/main/docs/Installation.md) (optional)
 
